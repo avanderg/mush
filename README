@@ -1,0 +1,25 @@
+Ryan Lau(rlau03) & Aaron VanderGraaff (avanderg)
+Project 6: mush
+
+    This assignment is to make a simple shell. We must implement:
+    - Interactive batch processing 
+        -> if no arguments, take cmds from stdin until ^D or exit
+        -> if args read commands from argv
+    - Support for redirection
+        -> <, >, and | to feed output of one command to input of another
+    - Built-in cd command
+        -> ***CD CANNOT BE RUN AS A CHILD PROCESS
+    - Support for SIGINT
+        -> When ^C is typed, shell doesn't die but terminate any running
+            children and reset itself.
+
+    mush looks and acts like a simple shell. It does not support tab
+    auto-complete or an up-arrow for history (yet). And it definitely
+    does not support bash-like shell scripting. Stick to GNU commands
+    and it works great and is pretty fun, until you want to auto-complete
+    or get your history. 
+    The SIGINT doesn't work perfectly, that could use some work.
+
+Special Instructions: No special instructions. Usage is as follows
+ 	./mush to start the shell. Supports SIGINT, file redirection,
+	and pipes. To run in script mode: ./mush <filename>.
